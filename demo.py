@@ -12,7 +12,7 @@ def index():
     if request.method == 'POST':
         city = request.form.get('city')
         url = f'http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric'
-#        url = f'http://dataservice.accuweather.com/locations/v1/search?q={city}&apikey={api_key}'
+##        url = f'http://dataservice.accuweather.com/locations/v1/search?q={city}&apikey={api_key}'
         response = requests.get(url)
         if response.status_code == 200:
             data = response.json()
